@@ -1,79 +1,70 @@
-<!DOCTYPE html>
-<html>
-<head>
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+ <title>Anjali K. Desai</title>
+ <meta charset="utf-8">
+ 	<link href="https://fonts.googleapis.com/css?family=Cinzel|Dancing+Script" rel="stylesheet">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="icon" type="image" href="orbit.png"> 
+ </head>
+ <body>
+ 	<!-- NAVBAR -->
+ 	<nav class="navbar navbar-inverse ">
+    	<ul class="nav navbar-nav">
+      		<li><a href="#">About Me</a></li>
+      		<li><a href="#">Projects</a></li>
+      		<li><a href="#">Resume</a></li>
+   			<li><a href="#">Contact Me</a></li>
+    	</ul>
+	</nav>
+
+	<!-- ANIMATED NAME -->
+ 	<div class="col-lg-1"></div>
+ 	<div class="col-lg-10">
+ 	 <svg width="800" height="700" version="1.1" xmlns="http://www.w3.org/2000/svg">
+
+     <text class="path" xml:space="preserve" text-anchor="middle" font-family="Dancing Script, cursive" font-size="65" id="svg_1" y="250" x="500" stroke-width="1" stroke="rgb(92, 138, 138)" 
+     fill="rgb(92, 138, 138)">Anjali K. Desai</text>
+
+     </svg>
+    </div>
+    <div class="col-lg-1"></div>
+
+
+ </body>
 <style>
-body {background-image: url("earth.jpg");
-      background-color: black;
-      background-repeat: no-repeat;
-      background-position: top center;}
+	body {
+		background-image: url("star.jpg");
+	}
+	.col-lg-10 {
+		background-image: url("star.jpg");
+	}
+	
+	.navbar.navbar-inverse {
+    	border-radius: 20px;
+    	font-family: 'Cinzel', serif;
+    	background-color: black;
+  	}
+    .path {
+    	   text-align: center;
+           stroke-dasharray: 1000;
+           stroke-dashoffset: 1000;
+           -webkit-animation: dash 30s  ;
 
-h1 {font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-  color: white;
-  height: 0px;
-  margin: 50px; 
-  font-size: 60px;
-  text-align: center;}
+          }
 
-/*About Me Page*/
-a.one:link {font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-            color: white;
-            text-decoration: none;
-            padding: 15px 25px;
-            text-align: center;
-            display: inline-block;}
-a.one:hover {font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-             color: white;
-             background-color: rgb(79, 164, 173);
-             text-decoration: none;}
-a.one:visited {font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-               color: white;
-               text-decoration: none;}
-/* ---------------------------------------------------------------- */
-/* Education Page */
-a.two:link {font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-            color: white;
-            text-decoration: none;
-            padding: 15px 25px;
-            text-align:center;
-            display: inline-block;}
-a.two:hover {font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-            color: white;
-            background-color:rgb(79, 164, 173);
-            text-decoration: none;
-            }
-a.two:visited {font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-            color: white;
-            text-decoration: none;}
-/* ---------------------------------------------------------------- */
-/* Projects Page */
-a.three:link {font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-            color: white;
-            text-decoration: none;
-            padding: 15px 25px;
-            text-align:center;
-            display: inline-block;}
-a.three:hover {font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-            color: white;
-            background-color:rgb(79, 164, 173);
-            text-decoration: none;
-            }
-a.three:visited {font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-            color: white;
-            text-decoration: none;}
+     @-webkit-keyframes dash {
+           from {
+                 stroke-dashoffset: 1000;
+                 fill-opacity: 0;
+           }
+           to {
+                 stroke-dashoffset: 100;
+                 fill-opacity: 1;
+              }
+         }
 </style>
-</head>
-<body>
-
-<div class="tab">
-  <a class= "one" href="about.html">About Me</a>
-  <a class= "two" href="res.html">Resume</a>
-  <a class= "three" href="proj.html">Projects</a>
-</div>
-
-
-
-<h1>Anjali Desai</h1>
-
-     
-</body>
-</html> 
+</html>
