@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+ <title>Astronomy 341 Research Blog</title>
+ <meta charset="utf-8">
+ 	<link href="https://fonts.googleapis.com/css?family=Italianno|Josefin+Sans" rel="stylesheet">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="icon" type="image" href="orbit.png"> 
+ </head>
+ <body>
+ 	<!-- NAVBAR -->
+ 	<nav class="navbar navbar-inverse">
+ 		<div class="navbar-header navbar-right">
+ 			<h1 style="color: rgb(92, 138, 138); font-family: 'Italianno', cursive; margin: 0px 30px; font-size: 50px">Anjali K. Desai</h1>
+ 		</div>
+    	<ul class="nav navbar-nav" >
+			<li><a href="index.html">Home</a></li>    	
+   			<li><a href="about.html">About Me</a></li>
+  			<li><a href="project.html">Projects</a></li>
+   			<li><a href="resume.html">Resume</a></li>
+   			<li><a href="contact.html">Contact Me</a></li>
+   			<li class="active"><a href="blog.html">Research Blog</a></li>
+    	</ul>
+	</nav>
+	
+
+	<!-- DESCRIPTION -->
+	<div class="container-fluid">
+		<div class="col-sm-1"></div>
+		<div class="col-sm-10">
+		<hr>
+			<div class="col-10">
+				<h1>Research Blog #1</h1>
+				<h2>Summary of the Observing Trip</h2>
+				<p class="text-left" style="letter-spacing: 1px; line-height: 1.8; margin: 0px 0px;">
+					During the trip I learned that it is very important to keep track of what images you are taking and which ones you have already taken.  Without this it is very easy to get confused and loose track of what you are observing.  As a student my role was to take images of the fields and to log the images we have taken.  It was also our role to make sure the field is in focus, move the telescope and dome when switching a field, and track the field by finding a guide star.  I learned it it is quite easy, and simple, to command the HDI through the HDI server.  It is also very easy to make a mistake, but very hard to correct it once imaging has started.  The data contains images of four different fields that all vary in age.  However, they all contain young, low mass stars.  I learned the field 2, Taurus, has some nebulosity and interstellar dust and that field 4, Coma Ber, has various dim objects.  
+
+				</p>
+				<h2 style="margin: 20px 0px">Reduction Summary</h2>
+				<p class="text-left" style="letter-spacing: 1px; line-height: 1.8">
+					In order to reduce the data we will be using python and Jupyter notebooks; we will also use Ds9. First we create the master bias and then create the master flat.  After, we get these two images we subtract our master bias from our raw science image and then divided this by the master flat.  We have now reduced our data; now we need to stack it so our images, in each filter, is aligned.  Now we stack the images to ensure all of our reduced data is aligned.  We do this by following the COR method.  First we calculate where two images overlap and measure their x and y offsets.  Next, we shift the image by the x and y offsets.  We then repeat this process for the remaining images in each filter.
+				</p>
+				<h2  style="margin: 20px 0px">What Data Will We Use?</h2>
+				<p class="text-left" style="letter-spacing: 1px; line-height: 1.8">
+					For our research we will be using the science images of Coma Ber.  We will also use both dome and twilight flats and all the bias images.  
+				</p>
+				<hr>
+			</div>
+			<div class="col-sm-12 text-right" style="letter-spacing: 2px; line-height: 1.8; color: rgb(217,217,217)">
+				<p>
+					"The universe is under no obligation to make sense to you." <br>-Neil DeGrasse Tyson
+				</p>
+			</div>
+		</div>
+	</div>
+ </body>
+ <style>
+
+ 	body {
+		background-image: url("star.jpg");
+	}
+
+ 	.navbar.navbar-inverse {
+    	font-family: 'Josefin Sans', sans-serif;
+    	background-color: black;
+    	font-size: 17px;
+    	padding: -10px ;
+  	}
+
+  	.col-sm-10{
+  		background-color: black;
+  		font-family: 'Josefin Sans', sans-serif;
+  		color: rgb(217,217,217); 
+  	}
+ </style>
+ </html>
