@@ -10,9 +10,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="icon" type="image" href="orbit.png"> 
  </head>
- <body>
+ <body data-spy="scroll" data-target=".navbar" data-offset="50">
  	<!-- NAVBAR -->
- 	<nav class="navbar navbar-inverse">
+ 	<nav class="navbar navbar-inverse navbar-fixed-top">
  		<div class="navbar-header navbar-right">
  			<h1 style="color: rgb(92, 138, 138); font-family: 'Italianno', cursive; margin: 0px 30px; font-size: 50px">Anjali K. Desai</h1>
  		</div>
@@ -22,30 +22,73 @@
   			<li><a href="project.html">Projects</a></li>
    			<li><a href="resume.html">Resume</a></li>
    			<li><a href="contact.html">Contact Me</a></li>
-   			<li class="active"><a href="blog.html">Research Blog</a></li>
+   			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Research Blog<span class="caret"></span></a>
+            	<ul class="dropdown-menu">
+            		<li><a href="#blog1">Week 1</a></li>    	
+   					<li><a href="#blog2">Week 2</a></li>
+   				</ul>
+   			</li>
     	</ul>
 	</nav>
-	
 
 	<!-- DESCRIPTION -->
-	<div class="container-fluid">
+	<div id="blog1" class="container-fluid" style="padding-top:50px">
 		<div class="col-sm-1"></div>
 		<div class="col-sm-10">
 		<hr>
 			<div class="col-10">
-				<h1>Research Blog #1</h1>
-				<h2>Summary of the Observing Trip</h2>
+				<h1>Week #1</h1>
+				<h3>Summary of the Observing Trip</h3>
 				<p class="text-left" style="letter-spacing: 1px; line-height: 1.8; margin: 0px 0px;">
-					During the trip I learned that it is very important to keep track of what images you are taking and which ones you have already taken.  Without this it is very easy to get confused and loose track of what you are observing.  As a student my role was to take images of the fields and to log the images we have taken.  It was also our role to make sure the field is in focus, move the telescope and dome when switching a field, and track the field by finding a guide star.  I learned it it is quite easy, and simple, to command the HDI through the HDI server.  It is also very easy to make a mistake, but very hard to correct it once imaging has started.  The data contains images of four different fields that all vary in age.  However, they all contain young, low mass stars.  I learned the field 2, Taurus, has some nebulosity and interstellar dust and that field 4, Coma Ber, has various dim objects.  
+					During the trip I learned that it is very important to keep track of what images you are taking and which ones you have already taken.  Without this it is very easy to get confused and loose track of what you are observing.  As a student my role was to take images of the fields and to log the images we have taken.  It was also our role to make sure the field is in focus, move the telescope and dome when switching a field, and track the field by finding a guide star.  I learned it it is quite easy, and simple, to command the HDI through the HDI server.  It is also very easy to make a mistake, but very hard to correct it once imaging has started.  The data contains images of four different fields that all vary in age.  However, they all contain young, low mass stars.  I learned the field 2, Taurus, has some nebulosity and interstellar dust and that field 4, Coma Ber, has various dim objects.  <br><br>
 
 				</p>
-				<h2 style="margin: 20px 0px">Reduction Summary</h2>
+				<h3 style="margin: 0px 0px">Reduction Summary</h3>
 				<p class="text-left" style="letter-spacing: 1px; line-height: 1.8">
-					In order to reduce the data we will be using python and Jupyter notebooks; we will also use Ds9. First we create the master bias and then create the master flat.  After, we get these two images we subtract our master bias from our raw science image and then divided this by the master flat.  We have now reduced our data; now we need to stack it so our images, in each filter, is aligned.  Now we stack the images to ensure all of our reduced data is aligned.  We do this by following the COR method.  First we calculate where two images overlap and measure their x and y offsets.  Next, we shift the image by the x and y offsets.  We then repeat this process for the remaining images in each filter.
+					In order to reduce the data we will be using python and Jupyter notebooks; we will also use Ds9. First we create the master bias and then create the master flat.  After, we get these two images we subtract our master bias from our raw science image and then divided this by the master flat.  We have now reduced our data; now we need to stack it so our images, in each filter, is aligned.  Now we stack the images to ensure all of our reduced data is aligned.  We do this by following the COR method.  First we calculate where two images overlap and measure their x and y offsets.  Next, we shift the image by the x and y offsets.  We then repeat this process for the remaining images in each filter. <br><br>
 				</p>
-				<h2  style="margin: 20px 0px">What Data Will We Use?</h2>
+				<h3  style="margin: 0px 0px">What Data Will We Use?</h3>
 				<p class="text-left" style="letter-spacing: 1px; line-height: 1.8">
-					For our research we will be using the science images of Coma Ber.  We will also use both dome and twilight flats and all the bias images.  
+					For our research we will be using the science images of Coma Ber.  We will also use both dome and twilight flats and all the bias images.  <br>
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div id="blog2" class="container-fluid" style="padding-top:50px">
+		<div class="col-sm-1"></div>
+		<div class="col-sm-10">
+		<hr>
+			<div class="col-10">
+				<h1>Week #2</h1>
+				<h3>Summary of the Past Week</h3>
+				<p class="text-left" style="letter-spacing: 1px; line-height: 1.8; margin: 0px 0px;">
+					This past week I worked on bias-correction in the images of our run; specifically the images from Night 4.  It is necessary to do bias-correction because by doing so you are eliminating excess noise and the overscan region.  The overscan is caused due to the fact that the CCD has 4 detectors that often collect the same data in certain regions.  My pseudocode stated to subtract the overscan from all the quadrants and piece them together.  It did not explore the calculating the mean overscan and creating a blank image and adding the bias subtracted images to the blank image. <br> 
+
+					The process to bias-correct your images is as follows (1) read the mean overscan values of the images (2) subtract the values from each quadrant (3) create a blank image (4) add the bias subtracted quadrants to the new image.  <br>
+
+					I decided to run the benchmark test on my personal computer.  The total time elapsed to read the bias files was 0.092 seconds and the total time elapsed to read and calculate the median overscan was 6.92 seconds. <br>
+
+					From the Night 4 dataset I used only the Coma Ber images in the I band filter.  The corrected images had a black stripe going through the middle of the image, depicting the overscan subtraction.  Overall it was a bit hard to see the stars in the field; this may be because of the high wind speeds. <br><br>
+				</p>
+				<h3 style="margin: 0px 0px">Herbst Paper Notes</h3>
+				<p class="text-left" style="letter-spacing: 1px; line-height: 1.8">
+					Objective: <br>
+					Investigate the rotation period data from a large range of masses. Discuss why our present knowledge of these objects prevents us from learning more about their rotation rates in their first Myrs of life.  <br> <br>
+					Methods: <br>
+					To measure the rotation rates of these objects, spots on its’ surface were monitored.  Light curves were made from these observations.  <br><br>
+					Main Points: <br>
+					It is hard to monitor the evolution of rotation rates of young stellar objects and brown dwarfs because we do not know much  about their stellar radii. We can identify specific rotation rates of these objects because they are near independent of their mass.  The more massive stars follow a nice bimodal distribution in their early phases.  The rapid rotators evolve to ZAMS with little to no angular momentum loss.  A connection between the rotation rates and accretion seems prevalent as the slower rotators lose a lot of momentum and have accretion disks.  The accretion disks seem to affect the rotation rates of the object for about 5 Myr (sometimes less).  If the data collected is accurate then solar like stars have about 1 Myr to create giant planets.  <br><br>
+				</p>
+				<h3  style="margin: 0px 0px">Feedback from Proposal Outline</h3>
+				<p class="text-left" style="letter-spacing: 1px; line-height: 1.8">
+					My proposal outline was very basic and was only a half page long.  I was able to get a lot of  feedback on my proposal.  When I began writing the proposal I didn’t have a clear objective or motivation, but with the feedback I was able to come up with a clearer idea of the project. 
+					<br><br>
+				</p>
+				<h3 style="margin: 0px 0px">Additional Paper</h3>
+				<p class="text-left" style="letter-spacing: 1px; line-height: 1.8">
+					I found a paper titled "New Red Jewels in Coma Berenices".  It explores how new objects were discovered in Coma Ber using data taken from Sloan Digital Sky Survey - III.  I am still trying to figure out the techniques of the paper.  
+					<br><br>
 				</p>
 				<hr>
 			</div>
