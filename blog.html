@@ -26,6 +26,7 @@
             	<ul class="dropdown-menu">
             		<li><a href="#blog1">Week 1</a></li>    	
    					<li><a href="#blog2">Week 2</a></li>
+   					<li><a href="#blog3">Week 3</a></li>
    				</ul>
    			</li>
     	</ul>
@@ -92,7 +93,49 @@
 				</p>
 				<hr>
 			</div>
-			<div class="col-sm-12 text-right" style="letter-spacing: 2px; line-height: 1.8; color: rgb(217,217,217)">
+		</div>
+		</div>
+
+			<div id="blog3" class="container-fluid" style="padding-top:50px">
+				<div class="col-sm-1"></div>
+				<div class="col-sm-10">
+				<hr>
+					<div class="col-10">
+					<h1>Week #3</h1>
+					<h3>Summary of the Past Week</h3><br>
+					<h4>Bias Correction</h4>
+					<p class="text-left" style="letter-spacing: 1px; line-height: 1.8; margin: 0px 0px;">
+						Over the past week I worked on bias-correction and flatfielding.  While performing bias-correction I sorted out the Coma Ber images that were taken in the I band filter.  I did this by looking at the observation logs and matching the image numbers.  I then put the Coma Ber images in their own file.  Out of those images I used the find_files() function in the bias_correction folder to identify those images taken in the I band filter. <br> 
+						After isolating those images I read the images and bias corrected and removed the overscan.  However, when I did this the resulting image was not what I was expecting.  Here is what the images looked like:<br>
+						<img src="biasCorr.png" alt="BiasCorr" class="center" width="500" height="377"><br>
+						As you can see there are not many stars that you can see in the image.  I am not entirely sure why this is happening.  
+  						<br><br>
+					</p>
+					<h4>Flat Fielding</h4>
+					<p class="text-left" style="letter-spacing: 1px; line-height: 1.8; margin: 0px 0px;">
+					After my images were bias corrected I began the flatfielding process.  The first step was to identify all the flat images in the Night 4 data.  I did this my matching the image numbers from the observing logs to the numbers listed in the file name.  Once I isolated the flat images taken in the I band filter, I began to create the master flat. <br>
+
+					In order to create a master flat I first completed the bias correction on the flat images in the I band filter.  After I did this I stacked the flats into a median combo.  Once this is done I normalized the median combo image by its median value.  <br>
+
+					I ran into a problem when trying to stack the flats in the I band filter.  The total number of flat images I had counted was 14, but all the program found was 5.  I believe this is because in the header of the omitted images their type is stated as Object instead of Flat.  I am unsure on how to fix this. <br>  
+
+					After creating the master flat you need to divide the science images by the master flat.  I first decided work on one science image to see if the program is working.  Unfortunately, this is where I ran into my biggest problem.  As I tried to divide the science images by the master flat I kept getting the following error message: ValueError: operands could not be broadcast together with shapes (4112,4312) (0,).  I am still trying to figure out why this is happening, but have not had any luck so far.  <br><br>
+					</p>
+					<h4>The Next Steps</h4>
+					<p class="text-left" style="letter-spacing: 1px; line-height: 1.8; margin: 0px 0px;">
+						The next steps in the data analysis would be to bias subtract and flatfield all the Coma Ber images from all the nights.  This is take a lot of memory and time, so there is no way I can perform it on my laptop.  I will have to go use one of the lab computers.  <br><br>
+					</p> 
+					<h3 style="margin: 0px 0px">Paper Notes</h3>
+					<p class="text-left" style="letter-spacing: 1px; line-height: 1.8">
+						The paper I found useful for my project is titled “New Red Jewels in Coma Berenices”.  The paper explores the new objects found in Coma Ber.  It states how the researchers used the Sloan Digital Sky Survey-III data to identify the objects in Coma Ber.  They were able to confirm the presence of eight K/M dwarf stars in the cluster. <br> 
+						This paper explored the relevance of studying the low mass stars in the cluster.  It helped me find the scientific motivation for my research proposal and also helped me visualize the type of objects that are located in Coma Ber.  The following graph was helpful in this visualization.  <br>
+						<img src="article.jpg" alt="article" class="center" width="400" height="377"><br><br><br>
+					</p>
+					<hr>
+				</div>
+			</div>
+		</div>
+			<div class="col-sm-11 text-right" style="letter-spacing: 2px; line-height: 1.8; color: rgb(217,217,217)">
 				<p>
 					"The universe is under no obligation to make sense to you." <br>-Neil DeGrasse Tyson
 				</p>
