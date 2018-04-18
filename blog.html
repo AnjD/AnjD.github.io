@@ -34,6 +34,7 @@
    					<li><a href="#blog8">Week 8</a></li>
    					<li><a href="#blog9">Week 9</a></li>
    					<li><a href="#blog10">Week 10</a></li>
+   					<li><a href="#blog11">Week 11</a></li>
    				</ul>
    			</li>
     	</ul>
@@ -465,6 +466,45 @@
 			</div>
 		</div>
 
+		<div id="blog11" class="container-fluid" style="padding-top:50px">
+				<div class="col-sm-1"></div>
+				<div class="col-sm-10">
+				<hr>
+					<div class="col-10">
+					<h1>Week #11</h1>
+					<h3>What I Worked on This Week</h3><br>
+					<h4>Updated Figures</h4>
+					<p class="text-left" style="letter-spacing: 1px; line-height: 1.8; margin: 0px 0px;">
+						Over the past couple of weeks I kept having issues with the alignment of the my images.  When I would use AIJ to obtain the fluxes of the targets in the field I would eventually run into the issue where AIJ would tell me that the target is not found.  I tried several times to redo alignment and run AIJ in order to see if it repeats; it did.  It took days to realize that I had commented out an important part of my code; the cross_image() function.  Once I uncommented this out and ran alignment on night 2, it seemed to work until the last image.  I did not think much of this.  I then moved on to night 3 but, again ran into the alignment issue.  After which I changed the box_size to 500 but, this still didn’t work.  I am attempting to figure out the ideal box_size to use.  So far I have updated light curves for the targets and one comparison on night 2.  The error bars are included, but seem to be very small except for one.  Here are the figures:
+						<br>
+  						<img src="T3N2.png" alt="T3N2" class="center" width="350" height="300">
+  						<img src="T4N2.png" alt="T4N2" class="center" width="350" height="300">
+						<br>
+						<img src="T5N2.png" alt="T5N2" class="center" width="350" height="300">
+						<img src="CN2.png" alt="CN2" class="center" width="350" height="300">
+						<br>
+						I was also able to also create light curves for the faint objects in my field.  This was done by taking data from the stacked image of one night.  In total I had 8 combined images for 8 nights of data collection.  This means I would have only 8 data points in my light curve.  The data point for night 4 is very large due to the fact that the data taken was inaccurate due to cloud coverage.  For some reason everytime I tried combining the images from night 8 I kept getting NaN values.  As of now I have the light curve from night 1 - 7 of the faint stars.  From the light curves below you can see there is a similar pattern in both of the curves and I think this is because the comparison star is varying.  For next week I am going to attempt to make mini stack images of one night and collect data from them and also redo the light curves of the faint stars.  So far, this is the light curve I have for the faint objects:
+						<br>
+  						<img src="T1.png" alt="T1" class="center" width="350" height="300">
+  						<img src="T2.png" alt="T2" class="center" width="350" height="300">
+  						<br><br>
+					</p>
+					<h4>New Plots</h4>
+					<p class="text-left" style="letter-spacing: 1px; line-height: 1.8; margin: 0px 0px;">
+					From the above curves you can see that “variation” is much more steady with a use of the new comparison stars.  I used three stars that did not vary much throughout the night.  It took some trial and error to get the right comparisons.  From the light curve it seems that Target 3 varies in flux on an order of 1; going from a value of 10-11.  This same relationship stands for targets 4 and 5.  T4 varies from 4.5-5.5 and T5 varies from 4-5.    
+					<br><br>
+					</p>
+					<h4>Poster Outline Feedback</h4>
+					<p class="text-left" style="letter-spacing: 1px; line-height: 1.8; margin: 0px 0px;">
+						The poster outline was very helpful.  We were able to figure out what it was that our poster was missing and added those sections in.  As far as figures and conclusions go, we are still working on it.  Avery is still working on creating light curves for the targets in the V and R band and I am doing the same with the I band.  We will not be able to create full conclusions until the light curves are made.  I should have my light curves done by Thursday.  
+						<br><br>
+
+					</p> 
+					<hr>
+				</div>
+			</div>
+		</div>
+
 			<div class="col-sm-11 text-right" style="letter-spacing: 2px; line-height: 1.8; color: rgb(217,217,217)">
 				<p>
 					"The universe is under no obligation to make sense to you." <br>-Neil DeGrasse Tyson
@@ -491,5 +531,7 @@
   		font-family: 'Josefin Sans', sans-serif;
   		color: rgb(217,217,217); 
   	}
+
+  	
  </style>
  </html>
