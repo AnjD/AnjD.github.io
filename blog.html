@@ -36,6 +36,7 @@
    					<li><a href="#blog10">Week 10</a></li>
    					<li><a href="#blog11">Week 11</a></li>
    					<li><a href="#blog12">Week 12</a></li>
+   					<li><a href="#blog13">Week 13</a></li>
    				</ul>
    			</li>
     	</ul>
@@ -117,7 +118,7 @@
 					<p class="text-left" style="letter-spacing: 1px; line-height: 1.8; margin: 0px 0px;">
 						Over the past week I worked on bias-correction and flatfielding.  While performing bias-correction I sorted out the Coma Ber images that were taken in the I band filter.  I did this by looking at the observation logs and matching the image numbers.  I then put the Coma Ber images in their own file.  Out of those images I used the find_files() function in the bias_correction folder to identify those images taken in the I band filter. <br> 
 						After isolating those images I read the images and bias corrected and removed the overscan.  However, when I did this the resulting image was not what I was expecting.  Here is what the images looked like:<br>
-						<img src="biasCorr.png" alt="BiasCorr" class="center" width="500" height="377"><br>
+						<img src="images/biasCorr.png" alt="BiasCorr" class="center" width="500" height="377"><br>
 						As you can see there are not many stars that you can see in the image.  I am not entirely sure why this is happening.  
   						<br><br>
 					</p>
@@ -139,7 +140,7 @@
 					<p class="text-left" style="letter-spacing: 1px; line-height: 1.8">
 						The paper I found useful for my project is titled “New Red Jewels in Coma Berenices”.  The paper explores the new objects found in Coma Ber.  It states how the researchers used the Sloan Digital Sky Survey-III data to identify the objects in Coma Ber.  They were able to confirm the presence of eight K/M dwarf stars in the cluster. <br> 
 						This paper explored the relevance of studying the low mass stars in the cluster.  It helped me find the scientific motivation for my research proposal and also helped me visualize the type of objects that are located in Coma Ber.  The following graph was helpful in this visualization.  <br>
-						<img src="article.jpg" alt="article" class="center" width="400" height="377"><br><br><br>
+						<img src="images/article.jpg" alt="article" class="center" width="400" height="377"><br><br><br>
 					</p>
 					<hr>
 				</div>
@@ -173,11 +174,11 @@
 						Due to the fact that I was not on campus this weekend I was not able to use the lab computers until Tuesday evening.  I noticed a huge difference in using the lab computers instead of mine.  Because of this delay I have only been able to go through with the combining images method that we used in AST 337.  I started the combining process by initially just coding on my laptop however, I was not able to test my code as doing so would take up a lot of memory and time.  The bias correction part of the notebook went smoothly.  Once the bias correction was done I started running into some issues.   <br>
 						The first of which being that I cannot divide my science images by my master flat because their dimensions do not match.  I had realized that I never got the data from the master flat image.  Even after I got the data from the master flat I kept running into division errors.  It was then that I decided to just add the master flat calculation to my current notebook and just to call the newly calculated image, instead of calling it from a folder.  <br>
 						I had tried to create lists of the new images that were being created; after bias correction and flatfielding.  Unfortunately, this did not work out well.  In the end I just wrote the files and accessed them again in order to perform the necessary data reduction.  The next big issue I ran into was when I viewed the combined images this is what I saw: <br>
-						<img src="im1.png" alt="Comb1" class="center" width="500" height="377"><br>
+						<img src="images/im1.png" alt="Comb1" class="center" width="500" height="377"><br>
 						As you can see the image has a bar through the middle with a lot of white specs.  There are also no stars to be seen anywhere else in the image.  This is because I had forgotten to trim the bias from both the flat and science images.  Once, I trimmed the image I was given a much better result.  Here are the before and after data reduction images: <br>
-						BEFORE: <img src="im4.png" alt="Raw" class="center" width="500" height="377"><br>
+						BEFORE: <img src="images/im4.png" alt="Raw" class="center" width="500" height="377"><br>
 
-						AFTER: <img src="im2.png" alt="Comb2" class="center" width="500" height="377"><br>
+						AFTER: <img src="images/im2.png" alt="Comb2" class="center" width="500" height="377"><br>
 					</p> 
 					<h4>Next Steps</h4>
 					<p class="text-left" style="letter-spacing: 1px; line-height: 1.8; margin: 0px 0px;">
@@ -190,9 +191,9 @@
 					<h4>What is Differential Photometry?</h4>
 					<p class="text-left" style="letter-spacing: 1px; line-height: 1.8; margin: 0px 0px;">
 						Differential photometry helps us obtain the raw magnitude of the star.  What does this mean? When we observe a certain field the magnitudes we obtain are called instrumental magnitudes.  This is because the instruments cause some interference and thus cause the calculated data to be skewed a bit.  With the help of differential photometry we are able to combat this issue.  This practice involves using a star in the same image and calculating its difference from the other stars in the field.  Here is what three stars look like before and after differential photometry. <br>
-						BEFORE: <img src="diffPhot1.png" alt="diffPhot1" class="center" width="500" height="377"><br>
+						BEFORE: <img src="images/diffPhot1.png" alt="diffPhot1" class="center" width="500" height="377"><br>
 
-						AFTER: <img src="diffPhot2.png" alt="diffPhot2" class="center" width="500" height="377"><br>
+						AFTER: <img src="images/diffPhot2.png" alt="diffPhot2" class="center" width="500" height="377"><br>
   						<br><br>
 					</p> 
 					<hr>
@@ -230,7 +231,7 @@
 					<h3 style="margin: 0px 0px">Which Stars are Actually in Coma Ber?</h3>
 					<p class="text-left" style="letter-spacing: 1px; line-height: 1.8">
 						During last class, on Thursday February 22nd, we did an in-class exercise to see how many stars are actually in our field.  We were giving a reduced and combined image of Coma Ber from Night 3, you can clearly see quite a bit of stars in this image.  We first uploaded the image to astrometry.net and were given the RA and Dec of each point in the image.  From this image we conducted some aperture photometry and discovered that the program found 144 stars.  You can see the results of the aperture photometry: <br>
-						<img src="regionsFound.png" alt="regions" class="center" width="500" height="377"><br>
+						<img src="images/regionsFound.png" alt="regions" class="center" width="500" height="377"><br>
 						After the comparison we saw that out of the 144 stars only 18 are actually in Coma Ber and are known.  I am currently working on laying these identified regions on the image.  <br><br>
 					</p>
 					<h3>Notes from Reading Over Previous Proposal Examples</h3>
@@ -258,13 +259,13 @@
 					<h4>Notes on Nights 2 and 3</h4>
 					<p class="text-left" style="letter-spacing: 1px; line-height: 1.8; margin: 0px 0px;">
 					There are stars!!! Unfortunately I was only able to do reductions on Night 3, thus far.  The main difficulty I had with doing the reduction of Night 3 was trying to download all the files.  When I went to download the files from Google Drive I kept getting errors stating that the files did not download properly.  I then tried iGetter, but could not download it on my computer.  Finally, I decided to use the command line to download the multiple files.  I used the command curl -O [url] to download the files.  I had made the mistake of using the url of the folder containing the files instead of the files themselves.  When I changed this, and added the range of files I wanted, I was able to download the files with ease.  This is what the images looked like after the corrections:<br> 
-					<img src="Night3.png" alt="Night3" class="center" width="500" height="377"> 
+					<img src="images/Night3.png" alt="Night3" class="center" width="500" height="377"> 
 					<br><br>
 					</p>
 					<h4>Notes on AstroImageJ</h4>
 					<p class="text-left" style="letter-spacing: 1px; line-height: 1.8; margin: 0px 0px;">
 						AstroImageJ creates a light curve of your target star.  You identify your target star and comparison stars.  Once you do this the program performs differential photometry and plots the lightcurve for your target star.  I chose a target star in my field and chose the comparison star based on how much it varied throughout the images.  The light curve I came up with was a bit puzzling.  I’m not sure how to interpret this: <br>
-						<img src="lightCurve1.png" alt="lCurve1" class="center" width="500" height="377"><br>
+						<img src="images/lightCurve1.png" alt="lCurve1" class="center" width="500" height="377"><br>
 						I believe that the gaps are due to the fact that I am only looking at 1 filter so the time is not continuous.  I’m hoping to figure out the best way around this, but as of now I am unclear as to how to do this.  <br><br>
 					</p> 
 					<h4>Notes on Image-Registration-Pedagogy</h4>
@@ -334,18 +335,18 @@
 					<p class="text-left" style="letter-spacing: 1px; line-height: 1.8; margin: 0px 0px;">
 					fter identifying which stars are actually in my field of Coma Ber I was able to make the light curves easily.  I chose 6 comparison stars in order to normalize the light curve of the target star easily.  This is what the light curves of Nights 1,2,3,and 8 looked like:
 					<br>
-					NIGHT 1: <img src="Night1.png" alt="Night1" class="center" width="500" height="377"><br>
-					NIGHT 2: <img src="Night2.png" alt="Night2" class="center" width="500" height="377"><br>
-					NIGHT 3: <img src="Night3-curve.png" alt="Night3-curve" class="center" width="500" height="377"><br>
-					NIGHT 8: <img src="Night8.png" alt="Night8" class="center" width="500" height="377"><br>
+					NIGHT 1: <img src="images/Night1.png" alt="Night1" class="center" width="500" height="377"><br>
+					NIGHT 2: <img src="images/Night2.png" alt="Night2" class="center" width="500" height="377"><br>
+					NIGHT 3: <img src="images/Night3-curve.png" alt="Night3-curve" class="center" width="500" height="377"><br>
+					NIGHT 8: <img src="images/Night8.png" alt="Night8" class="center" width="500" height="377"><br>
 					<br><br>
 					</p>
 					<h4>Finalized Target List</h4>
 					<p class="text-left" style="letter-spacing: 1px; line-height: 1.8; margin: 0px 0px;">
 						After completing the exercise we did in class to identify stars in our field; I made a region file for the Coma Ber field.  However, when I tried to load this file in ds9 nothing was showing up.  I double checked that I was in degrees, but still nothing was showing up.  I then opened the region file and noticed that the same star was being repeated multiple times.  I then realized that when we input the text file into vizier we have three lines identifying each star, which means it will look at each line as a different star.  This means the coordinates of the identified star was being repeated three times.  Once I was able to identify this I created a new region file, but still ran into the same issue where nothing was showing up.  I then manually added in the regions on the image.  Here are the stars that are identified in Coma Ber:
 						<br>
-						TARGET LIST: <img src="TargList.png" alt="TargList" class="center" width="700" height="300"><br>
-						TARGET IMAGE: <img src="TargIm.png" alt="TargIm" class="center" width="500" height="377"><br>
+						TARGET LIST: <img src="images/TargList.png" alt="TargList" class="center" width="700" height="300"><br>
+						TARGET IMAGE: <img src="images/TargIm.png" alt="TargIm" class="center" width="500" height="377"><br>
 						<br><br>
 
 					</p> 
@@ -359,7 +360,7 @@
   							<li>The telescope used was STELLA with a wide field imager WiFSIP.</li>
   							<li>Aperture photometry was used when conducting data reduction.</li>
   							<li>The most significant signal, from the periodogram created in the research, was 125 +- 5 days.</li>
-  							<li><img src="period.png" alt="period" class="center" width="500" height="377"></li>
+  							<li><img src="images/period.png" alt="period" class="center" width="500" height="377"></li>
   							<li>A program called StarSim was used to model the star spots.</li>
   							<li>The analysis proved that low mass stars, like GJ1214, tend to have periods longer than 80 days.</li>
   							<li>Analysis using StarSim showed that GJ1214’s brightness was dimmed by 6% due to starspots in the B and V filters and 4% in the I filter.</li>
@@ -384,7 +385,7 @@
 					<p class="text-left" style="letter-spacing: 1px; line-height: 1.8; margin: 0px 0px;">
 						The tips given in class were very helpful, especially about saving a subset of the data table.  It saved so much time, instead of weeding through the whole table I could just select the data I needed.  Here is an example of the data contained in the subset I used:
 						<br>
-  						Data Subset: <img src="dataSubset.png" alt="dataSubset" class="center" width="500" height="377"><br>
+  						Data Subset: <img src="images/dataSubset.png" alt="dataSubset" class="center" width="500" height="377"><br>
 						<br>
 						I first aligned the images to each other using the Image Registration Pedagogy.  After I shifted the images I saved them.  I used these images to get the data from AIJ, but get getting errors.  I noticed that the images kept shifting while in AIJ; meaning they weren't algned to each other.  While trying to run AIJ on these "aligned" images I kept getting errors that the target had no signal.  I even tried removing some of the images, but the error kept coming up.  I decided to just use the reduced images I created last week in order to get the data from AIJ.  <br><br>
 					</p>
@@ -392,7 +393,7 @@
 					<p class="text-left" style="letter-spacing: 1px; line-height: 1.8; margin: 0px 0px;">
 					Using the identifying stars in our field activity we did in class, my partner and I found that there are only 4 stars in the field that have been identified by the Krauss paper.  Of those 4 my partner and I decided to split them up in half.  I did the following stars:
 					<br>
-					Target 1 & 2: <img src="TargIm2.png" alt="TargIm2" class="center" width="500" height="377"><br>
+					Target 1 & 2: <img src="images/TargIm2.png" alt="TargIm2" class="center" width="500" height="377"><br>
 					Of these stars on is very faint, when creating the light curves the faint star was showing me a flux of almost zero.  I would like to see if there are more stars in the field so that I can have a better analysis.  Maybe there are other papers I could try using.  If I can find a paper by next week it would be great, this way I have more data to present for the poster.  
 					<br><br>
 					</p>
@@ -400,7 +401,7 @@
 					<p class="text-left" style="letter-spacing: 1px; line-height: 1.8; margin: 0px 0px;">
 						I’ve created light curves for both targets for all the nights, except night 6, and this is the one I found most interesting:
 						<br>
-						Light Curves for Night 8: <img src="Night8LC.png" alt="Night8LC" class="center" width="400" height="400"><br>
+						Light Curves for Night 8: <img src="images/Night8LC.png" alt="Night8LC" class="center" width="400" height="400"><br>
 						This is the light curve for the targets on night 8.  Target 1 shows a rather high variation which I find very intriguing.  However, when you look at the light curve for Target 2, you don’t see that much of a change.  I attribute this to the fact the star is very faint and hard to see in certain parts of the night.  
 						<br><br>
 
@@ -408,7 +409,7 @@
 					
 					<h3 style="margin: 0px 0px">Columns in Object Tables</h3>
 					<p class="text-left" style="letter-spacing: 1px; line-height: 1.8">
-						Error Message: <img src="VizieRErr1.png" alt="VizieRErr1" class="center" width="500" height="400"><br>
+						Error Message: <img src="images/VizieRErr1.png" alt="VizieRErr1" class="center" width="500" height="400"><br>
 						I kept getting this error, no matter how many times I tried running the program.  I even recreated the text file multiple times, but I could not get around this issue.  I’m not sure how to proceed in this case.  I tried running this on both the lab computers and my laptop.  When, attempting to run it on my laptop a second time, my laptop just crashed and turned off.  Luckily I didn't lose any valuable data.   
 						<br><br>
 					</p>
@@ -428,12 +429,12 @@
 					<p class="text-left" style="letter-spacing: 1px; line-height: 1.8; margin: 0px 0px;">
 						This week I tried the alignment of images again.  When doing the alignment of the images I decided to use a random image from the night and base the shifts from that image.  With this method I was able to get a nice light curve for my first target on night 1.  As you can see from the image below the comparison star doesn’t vary.
 						<br>
-  						Updated Night1 Light Curve: <img src="T1C1Night1.png" alt="T1C1Night1" class="center" width="350" height="400">
+  						Updated Night1 Light Curve: <img src="images/T1C1Night1.png" alt="T1C1Night1" class="center" width="350" height="400">
   						<br>
 						<br>
 						This is what the light curve of night 1 looked like before alignment.  As you can see the pattern of the curve stays the same, but the values of the flux vary.
 						<br>
-  						Old Night1 Light Curve: <img src="Night1LC.png" alt="Night1LC" class="center" width="400" height="400">
+  						Old Night1 Light Curve: <img src="images/Night1LC.png" alt="Night1LC" class="center" width="400" height="400">
   						<br>  
   						I also used a different way of obtaining the faint stars in Coma Ber.  I am first going to stack the images of one night together and make a light curve from the eight stacked images.  This is still in progress.
   						<br><br>
@@ -447,7 +448,7 @@
 					<p class="text-left" style="letter-spacing: 1px; line-height: 1.8; margin: 0px 0px;">
 						I created a periodogram for Night 1’s data and this was the resulting graph:
 						<br>
-						Night 1 Periodogram: <img src="night1period.png" alt="night1period" class="center" width="400" height="400"><br>
+						Night 1 Periodogram: <img src="images/night1period.png" alt="night1period" class="center" width="400" height="400"><br>
 						Upon further analysis I found that the best frequency for this periodogram was 75.73 and the best period was 0.013.  I still have to make periodograms on the other nights’ data.  
 						<br><br>
 
@@ -457,7 +458,7 @@
 					<p class="text-left" style="letter-spacing: 1px; line-height: 1.8; margin: 0px 0px;">
 						This week my partner and I used another paper to identify stars in our field of Coma Ber.  We found two new members: one that is faint and the other which is brighter.  The issue with the brighter star is that it is saturated so it may prove to be difficult when trying to create a light curve.  We also discovered that the stars in the field are all M class stars the fainter ones are M5 and the brighter ones are M6.  Here are the updated targets:
 						<br>
-						Updated Coma Ber Targets: <img src="comaTargets.png" alt="comaTargets" class="center" width="400" height="400">
+						Updated Coma Ber Targets: <img src="images/comaTargets.png" alt="comaTargets" class="center" width="400" height="400">
 						<br>
 						<br><br>
 
@@ -478,16 +479,16 @@
 					<p class="text-left" style="letter-spacing: 1px; line-height: 1.8; margin: 0px 0px;">
 						Over the past couple of weeks I kept having issues with the alignment of the my images.  When I would use AIJ to obtain the fluxes of the targets in the field I would eventually run into the issue where AIJ would tell me that the target is not found.  I tried several times to redo alignment and run AIJ in order to see if it repeats; it did.  It took days to realize that I had commented out an important part of my code; the cross_image() function.  Once I uncommented this out and ran alignment on night 2, it seemed to work until the last image.  I did not think much of this.  I then moved on to night 3 but, again ran into the alignment issue.  After which I changed the box_size to 500 but, this still didn’t work.  I am attempting to figure out the ideal box_size to use.  So far I have updated light curves for the targets and one comparison on night 2.  The error bars are included, but seem to be very small except for one.  Here are the figures:
 						<br>
-  						<img src="T3N2.png" alt="T3N2" class="center" width="350" height="300">
-  						<img src="T4N2.png" alt="T4N2" class="center" width="350" height="300">
+  						<img src="images/T3N2.png" alt="T3N2" class="center" width="350" height="300">
+  						<img src="images/T4N2.png" alt="T4N2" class="center" width="350" height="300">
 						<br>
-						<img src="T5N2.png" alt="T5N2" class="center" width="350" height="300">
-						<img src="CN2.png" alt="CN2" class="center" width="350" height="300">
+						<img src="images/T5N2.png" alt="T5N2" class="center" width="350" height="300">
+						<img src="images/CN2.png" alt="CN2" class="center" width="350" height="300">
 						<br>
 						I was also able to also create light curves for the faint objects in my field.  This was done by taking data from the stacked image of one night.  In total I had 8 combined images for 8 nights of data collection.  This means I would have only 8 data points in my light curve.  The data point for night 4 is very large due to the fact that the data taken was inaccurate due to cloud coverage.  For some reason everytime I tried combining the images from night 8 I kept getting NaN values.  As of now I have the light curve from night 1 - 7 of the faint stars.  From the light curves below you can see there is a similar pattern in both of the curves and I think this is because the comparison star is varying.  For next week I am going to attempt to make mini stack images of one night and collect data from them and also redo the light curves of the faint stars.  So far, this is the light curve I have for the faint objects:
 						<br>
-  						<img src="T1.png" alt="T1" class="center" width="350" height="300">
-  						<img src="T2.png" alt="T2" class="center" width="350" height="300">
+  						<img src="images/T1.1.png" alt="T1" class="center" width="350" height="300">
+  						<img src="images/T2.2.png" alt="T2" class="center" width="350" height="300">
   						<br><br>
 					</p>
 					<h4>New Plots</h4>
@@ -561,6 +562,38 @@
 					<h4>Thoughts On Presentation</h4>
 					<p class="text-left" style="letter-spacing: 1px; line-height: 1.8; margin: 0px 0px;">
 						I am a bit nervous about the upcoming presentation as I have never made a poster or presented research in this manner.  This being said I am trying to prepare the best I can and am practicing in front of friends of mine so that I can get more comfortable with public speaking.  I am also excited to see everyone else’s posters and see what they have discovered in their fields.    
+						<br><br>
+
+					</p> 
+					<hr>
+				</div>
+			</div>
+		</div>
+
+		<div id="blog13" class="container-fluid" style="padding-top:50px">
+				<div class="col-sm-1"></div>
+				<div class="col-sm-10">
+				<hr>
+					<div class="col-10">
+					<h1>Week #13</h1>
+					<h3>Recap of the FCAD End-of-Year Event</h3>
+					<p class="text-left" style="letter-spacing: 1px; line-height: 1.8; margin: 0px 0px;">
+						The event was a really great way to learn about the research that has been going on in the FCAD.  I didn’t realize there was research being done about the surface of Mars it was really interesting to see.  It was also nice to meet other students and faculty in the Five College Astronomy Department.  I had some nice conversations with people while presenting my poster.  It was a great experience! 
+  						<br><br>
+					</p>
+					<h3>Poster Presentation Thoughts</h3>
+					<p class="text-left" style="letter-spacing: 1px; line-height: 1.8; margin: 0px 0px;">
+						At first I was very nervous thinking about presenting the poster in front of the FCAD.  But, the more I talked about the poster the more comfortable I got.  By the end of the event I was very comfortable presenting the poster and all the nervousness had gone away.  One interesting discussion we had was the fact that the data in the I band filter was more sporadic than that in the V and R band filters.  We weren’t able to come to a conclusion as to why that was happening.  
+						<br><br>
+					</p>
+					<h3>Course Experience</h3>
+					<p class="text-left" style="letter-spacing: 1px; line-height: 1.8; margin: 0px 0px;">
+						I have been looking forward to this class ever since I declared my Astronomy major.  It has always been a dream of mine to go to an observatory and do some observing.  This class made that dream possible.  I had so much fun observing and visiting KPNO, if ever possible I would love to go again.  The observing experience exceeded my expectations.  Planning my research seemed a bit tricky as I felt I didn’t have too much background in order to make a solid plan.  I felt the hardest part of the whole class was writing the research proposal.  Planning the research was a bit different than what I had expected but, it was still very interesting. Delving into the research was challenging, but also very fun.  I enjoyed almost every minute of it.  The most difficulty I had with the research was actually aligning the images.  I expected conducting the research would give me a great insight into how astronomical research is done and it did not disappoint.  All in all I felt this class taught me a lot and it is definitely a class I would recommend to other students.
+						<br>
+						Lastly…
+						<br>
+						Thank you Kim and Mike for making this class an amazing research experience!!!
+ 
 						<br><br>
 
 					</p> 
